@@ -55,7 +55,6 @@ int MsgLength = 0;
 int i = 0;
 
 String line[rows];
-//String line1 = "";
 
 const char *ssid = "VirenTestNetz";
 const byte DNS_PORT = 53;
