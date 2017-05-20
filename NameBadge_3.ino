@@ -207,8 +207,6 @@ void loop() {
     lcd.setCursor(scrollCursor, i);
     lcd.print(line[i].substring(stringStart,stringStop));
     }
-  //lcd.setCursor(scrollCursor, 1);
-  //lcd.print(line1.substring(stringStart,stringStop));
   delay(ScrollDelay);
   
   if(stringStart == 0 && scrollCursor > 0){ // the cursor position is decreased while the string is increased (fill up rightest position)
@@ -216,8 +214,6 @@ void loop() {
   	stringStop++;
   } else if (scrollCursor == 0) {  // wenn der Cursor den linken Rand erreicht, links einen Char wegschneiden und rechts ankleben
     for (i = 0; i < (rows - 1); i++) {
-    	//line0 = line0.substring(1,line0.length()) + line1.substring(0,1);
-    	//line1 = line1.substring(1,line1.length()) + line1.substring(0,1);
       line[i] = line[i].substring(1,line[i].length()) + line[i + 1].substring(0,1);
       }      
     line[rows -1] = line[rows -1].substring(1,line[rows - 1].length()) + line[rows - 1].substring(0,1);
